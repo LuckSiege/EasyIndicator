@@ -27,6 +27,7 @@
       app:indicator_vertical_line_color="" 垂直线条颜色
       
       app:indicator_vertical_line_h=""  垂直线条高度
+      
          
    
       <com.luck.indicator.EasyIndicator
