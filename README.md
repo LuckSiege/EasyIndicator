@@ -12,16 +12,16 @@
         
         android:layout_height="wrap_content"
         
-        app:indicator_bottom_height="3dp" 
-        
-        app:indicator_bottom_line_color="@color/line_color"
-        
-        app:indicator_bottom_line_height="1dp"
-        
-        app:indicator_height="42dp"
-        
-        app:indicator_isBottom_line="true"
-        
+        app:indicator_bottom_height="3dp"  --底部指示器高度
+        
+        app:indicator_bottom_line_color="@color/line_color"  --底部线条颜色
+        
+        app:indicator_bottom_line_height="1dp" --底部线条高度
+        
+        app:indicator_height="42dp" --tab高度
+        
+        app:indicator_isBottom_line="true" --是否显示底部线条
+        
         app:indicator_line_color="@color/app_color"
         
         app:indicator_normal_color="@color/color_70"
