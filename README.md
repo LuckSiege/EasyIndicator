@@ -3,6 +3,7 @@
 一款简单的tab指示器，带平移动画效果，代码简单
 
 使用方法：
+
  
       <com.luck.indicator.EasyIndicator
       
