@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         
         app:indicator_bottom_height="3dp" 
+        
         
         app:indicator_bottom_line_color="@color/line_color"
         
