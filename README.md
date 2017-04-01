@@ -3,6 +3,7 @@
 一款简单的tab指示器，带平移动画效果，代码简单
 
 使用方法：
+
       <com.luck.indicator.EasyIndicator
       
         android:id="@+id/easy_indicator"
@@ -11,8 +12,8 @@
         
         android:layout_height="wrap_content"
         
-        app:indicator_bottom_height="3dp"
-        
+        app:indicator_bottom_height="3dp" 
+        
         app:indicator_bottom_line_color="@color/line_color"
         
         app:indicator_bottom_line_height="1dp"
