@@ -4,20 +4,35 @@
 
 使用方法：
       <com.luck.indicator.EasyIndicator
+      
         android:id="@+id/easy_indicator"
+        
         android:layout_width="match_parent"
+        
         android:layout_height="wrap_content"
+        
         app:indicator_bottom_height="3dp"
+        
         app:indicator_bottom_line_color="@color/line_color"
+        
         app:indicator_bottom_line_height="1dp"
+        
         app:indicator_height="42dp"
+        
         app:indicator_isBottom_line="true"
+        
         app:indicator_line_color="@color/app_color"
+        
         app:indicator_normal_color="@color/color_70"
+        
         app:indicator_selected_color="@color/app_color"
+        
         app:indicator_textSize="14sp"
+        
         app:indicator_vertical_line="1dp"
+        
         app:indicator_vertical_line_color="@color/line_color"
+        
         app:indicator_vertical_line_h="20dp" />
         
         
