@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyIndicator">
+        <attr name="indicator_height" format="dimension" />
+        <attr name="indicator_bottom_line_color" format="color" />
+        <attr name="indicator_bottom_line_height" format="dimension" />
+        <attr name="indicator_bottom_height" format="dimension" />
+        <attr name="indicator_textSize" format="dimension" />
+        <attr name="indicator_vertical_line" format="dimension" />
+        <attr name="indicator_vertical_line_h" format="dimension" />
+        <attr name="indicator_selected_color" format="color" />
+        <attr name="indicator_normal_color" format="color" />
+        <attr name="indicator_line_color" format="color" />
+        <attr name="indicator_vertical_line_color" format="color" />
+        <attr name="indicator_isBottom_line" format="boolean" />
+    </declare-styleable>
+</resources>
