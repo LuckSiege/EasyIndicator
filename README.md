@@ -14,8 +14,7 @@
         
         app:indicator_bottom_height="3dp" 
         
-        
-        app:indicator_bottom_line_color="@color/line_color"
+        app:indicator_bottom_line_color="@color/line_color"
         
         app:indicator_bottom_line_height="1dp"
         
