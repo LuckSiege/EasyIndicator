@@ -98,8 +98,9 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
         a.recycle();
 
         tab_content = new LinearLayout(getContext());
+        LinearLayoutCompat.LayoutParams params = new LinearLayoutCompat.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         tab_content.setBackgroundColor(Color.WHITE);
-        tab_content.setLayoutParams(new LinearLayoutCompat.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
+        tab_content.setLayoutParams(params);
         tab_content.setGravity(Gravity.CENTER);
     }
 
@@ -108,17 +109,19 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
      *
      * @param tabTitles
      */
+
     public void setTabTitles(String[] tabTitles) {
         // Create tab
         tvs = new TextView[tabTitles.length];
+
         for (int i = 0; i < tabTitles.length; i++) {
             view = new TextView(getContext());
-
             view.setTag(i);
             view.setText(tabTitles[i]);
             view.setTextSize(TypedValue.COMPLEX_UNIT_PX, indicator_textSize);
             view.setGravity(Gravity.CENTER);
-            view.setLayoutParams(new LinearLayout.LayoutParams(0, indicatorHeight, 1.0f));
+            LinearLayout.LayoutParams lp = new LayoutParams(0, indicatorHeight, 1.0f);
+            view.setLayoutParams(lp);
             switch (i) {
                 case 0:
                     view.setTextColor(indicator_selected_color);
@@ -154,8 +157,6 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
             });
             indicator.setBackgroundColor(indicator_line_color);
             addView(indicator);
-
-
         }
 
         // Create tab bottom line
