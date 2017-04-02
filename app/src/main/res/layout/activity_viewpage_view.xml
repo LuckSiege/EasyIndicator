@@ -23,7 +23,8 @@
         app:indicator_textSize="14sp"
         app:indicator_vertical_line="1dp"
         app:indicator_vertical_line_color="@color/line_color"
-        app:indicator_vertical_line_h="20dp" />
+        app:indicator_vertical_line_h="20dp"
+        app:indicator_width="0dp" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp"
