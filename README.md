@@ -4,6 +4,23 @@
 
 使用方法：
 
+    app 主项目的build.gradle
+    
+    allprojects {
+    
+		    repositories {
+       
+			   maven { url 'https://jitpack.io' }
+      
+		         }
+	    }
+    
+    dependencies {
+  
+	        compile 'com.github.LuckSiege:EasyIndicator:v1.0.0'
+         
+ 	  }
+
       app:indicator_bottom_height="" 底部指示器高度
       
       app:indicator_bottom_line_color="" 底部线条颜色
