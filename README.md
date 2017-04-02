@@ -17,7 +17,7 @@
     
     dependencies {
   
-	        compile 'com.github.LuckSiege:EasyIndicator:v1.0.1'
+	        compile 'com.github.LuckSiege:EasyIndicator:v1.0.2'
          
  	  }
 	  
