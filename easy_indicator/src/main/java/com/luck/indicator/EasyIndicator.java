@@ -40,6 +40,7 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
     private int currIndex;// 当前页卡编号
     public onTabClickListener onTabClickListener;
     private int indicatorHeight = 45;// tab默认高度
+    private int indicator_width = -1;// tab宽度,默认填充全屏
     private int indicator_bottom_line_height = 1;// 指示器底部线条高度
     private int indicator_vertical_line = 0;// 中间分割线
     private int indicator_vertical_line_h = 0;// 中间分割线高度
@@ -94,12 +95,19 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
         indicator_vertical_line_color = a.getColor(R.styleable.MyIndicator_indicator_vertical_line_color, indicator_vertical_line_color);
         // indicator_vertical_line_h
         indicator_vertical_line_h = (int) getDimensionPixelSize(a, R.styleable.MyIndicator_indicator_vertical_line_h, indicator_vertical_line_h);
+        // indicator_width
+        indicator_width = (int) getDimensionPixelSize(a, R.styleable.MyIndicator_indicator_width, indicator_width);
+
+        if (indicator_width == 0) {
+            indicator_width = -1;
+        }
 
         a.recycle();
 
         tab_content = new LinearLayout(getContext());
-        LinearLayoutCompat.LayoutParams params = new LinearLayoutCompat.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(indicator_width, LayoutParams.WRAP_CONTENT);
         tab_content.setBackgroundColor(Color.WHITE);
+        params.gravity = Gravity.CENTER;
         tab_content.setLayoutParams(params);
         tab_content.setGravity(Gravity.CENTER);
     }
@@ -147,7 +155,11 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
         if (indicator_isBottom_line) {
             // Create tab indicator
             indicator = new View(getContext());
-            indicator.setLayoutParams(new LinearLayoutCompat.LayoutParams(screenWidth / tvs.length, indicator_bottom_height));
+            int iw = 0;
+            if (indicator_width == 0 || indicator_width == -1) {
+                iw = screenWidth / tvs.length;
+            }
+            indicator.setLayoutParams(new LinearLayoutCompat.LayoutParams(iw, indicator_bottom_height));
             // Executive animation
             tvs[0].post(new Runnable() {
                 @Override
@@ -198,9 +210,8 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
 
 
     private AnimatorSet buildIndicatorAnimatorTowards(TextView tv) {
-
-        ObjectAnimator xAnimator = ObjectAnimator.ofFloat(indicator, "X", indicator.getX(), tv.getX());
-
+        float x = tab_content.getX();
+        ObjectAnimator xAnimator = ObjectAnimator.ofFloat(indicator, "X", indicator.getX(), tv.getX() + x);
         final ViewGroup.LayoutParams params = indicator.getLayoutParams();
         ValueAnimator widthAnimator = ValueAnimator.ofInt(params.width, tv.getMeasuredWidth());
         widthAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

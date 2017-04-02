@@ -8,6 +8,7 @@
         <attr name="indicator_textSize" format="dimension" />
         <attr name="indicator_vertical_line" format="dimension" />
         <attr name="indicator_vertical_line_h" format="dimension" />
+        <attr name="indicator_width" format="dimension" />
         <attr name="indicator_selected_color" format="color" />
         <attr name="indicator_normal_color" format="color" />
         <attr name="indicator_line_color" format="color" />
