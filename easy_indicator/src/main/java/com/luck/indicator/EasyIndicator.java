@@ -231,14 +231,15 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
     @Override
     public void onClick(View v) {
         TextView tv = ((TextView) v);
-        setSelectorColor(tv);
-        if (indicator_isBottom_line) {
-            buildIndicatorAnimatorTowards(tv).start();
-        }
         if (onTabClickListener != null) {
             position = (int) v.getTag();
             if (viewPager != null) {
                 viewPager.setCurrentItem(position);
+            } else {
+                setSelectorColor(tv);
+                if (indicator_isBottom_line) {
+                    buildIndicatorAnimatorTowards(tv).start();
+                }
             }
             onTabClickListener.onTabClick(((TextView) v).getText().toString(), position);
         }
