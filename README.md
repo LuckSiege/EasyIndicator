@@ -40,16 +40,15 @@
         app:indicator_width="0dp" />
 ```	
    ***app 主项目的build.gradle***
-   
-    
-    allprojects {
-    
-		    repositories {
-       
-			   maven { url 'https://jitpack.io' }
-      
-		         }
-	    }
+
+```
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
     
     dependencies {
   
