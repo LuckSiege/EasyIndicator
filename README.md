@@ -39,7 +39,7 @@
         app:indicator_vertical_line_h="20dp"
         app:indicator_width="0dp" />
 ```	
-   ***app 主项目的build.gradle***
+   ***主项目的build.gradle添加如下代码***
 
 ```
 allprojects {
@@ -49,12 +49,13 @@ allprojects {
     }
 }
 ```
-    
-    dependencies {
-  
-	        compile 'com.github.LuckSiege:EasyIndicator:v1.0.2'
-         
- 	  }
+  ***compile引入***
+
+```
+dependencies {
+	compile 'com.github.LuckSiege:EasyIndicator:v1.0.2'  
+}
+```
 	  
         
         
