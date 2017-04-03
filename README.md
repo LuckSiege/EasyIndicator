@@ -3,24 +3,6 @@
 一款简单的tab指示器，带平移动画效果，代码简单
 
 使用方法：
-
-    app 主项目的build.gradle
-    
-    allprojects {
-    
-		    repositories {
-       
-			   maven { url 'https://jitpack.io' }
-      
-		         }
-	    }
-    
-    dependencies {
-  
-	        compile 'com.github.LuckSiege:EasyIndicator:v1.0.2'
-         
- 	  }
-	  
       
       app:indicator_bottom_height="" 底部指示器高度
       
@@ -81,6 +63,25 @@
         app:indicator_vertical_line_color="@color/line_color"
         
         app:indicator_vertical_line_h="20dp" />
+	
+	
+   ***app 主项目的build.gradle***
+    
+    allprojects {
+    
+		    repositories {
+       
+			   maven { url 'https://jitpack.io' }
+      
+		         }
+	    }
+    
+    dependencies {
+  
+	        compile 'com.github.LuckSiege:EasyIndicator:v1.0.2'
+         
+ 	  }
+	  
         
         
 
