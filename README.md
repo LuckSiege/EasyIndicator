@@ -31,8 +31,7 @@
       
       app:indicator_vertical_line_h=""  垂直线条高度
       
-         
-   ```java
+
       <com.luck.indicator.EasyIndicator
       
         android:id="@+id/easy_indicator"
@@ -64,8 +63,7 @@
         app:indicator_vertical_line_color="@color/line_color"
         
         app:indicator_vertical_line_h="20dp" />
-	
-	```
+
    ***app 主项目的build.gradle***
    
     
