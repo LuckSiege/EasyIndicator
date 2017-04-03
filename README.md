@@ -31,8 +31,7 @@
       
       app:indicator_vertical_line_h=""  垂直线条高度
       
-      <com.luck.indicator.EasyIndicator
-      
+      <com.luck.indicator.EasyIndicator \<br> 
         android:id="@+id/easy_indicator"
         
         android:layout_width="match_parent"
