@@ -30,26 +30,26 @@
       app:indicator_vertical_line_color="" 垂直线条颜色
       
       app:indicator_vertical_line_h=""  垂直线条高度
-      
       
-<com.luck.indicator.EasyIndicator<br>
-        android:id="@+id/easy_indicator"<br>
-        android:layout_width="match_parent"<br>
-        android:layout_height="wrap_content"<br>
-        app:indicator_bottom_height="3dp"<br>
-        app:indicator_bottom_line_color="@color/line_color"<br>
-        app:indicator_bottom_line_height="1dp"<br>
-        app:indicator_height="42dp"<br>
-        app:indicator_isBottom_line="true"<br>
-        app:indicator_line_color="@color/app_color"<br>
-        app:indicator_normal_color="@color/color_70"<br>
-        app:indicator_selected_color="@color/app_color"<br>
-        app:indicator_textSize="14sp"<br>
-        app:indicator_vertical_line="1dp"<br>
-        app:indicator_vertical_line_color="@color/line_color"<br>
-        app:indicator_vertical_line_h="20dp"<br>
-        app:indicator_width="0dp" /><br>
-	
+```      
+<com.luck.indicator.EasyIndicator
+        android:id="@+id/easy_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:indicator_bottom_height="3dp"
+        app:indicator_bottom_line_color="@color/line_color"
+        app:indicator_bottom_line_height="1dp"
+        app:indicator_height="42dp"
+        app:indicator_isBottom_line="true"
+        app:indicator_line_color="@color/app_color"
+        app:indicator_normal_color="@color/color_70"
+        app:indicator_selected_color="@color/app_color"
+        app:indicator_textSize="14sp"
+        app:indicator_vertical_line="1dp"
+        app:indicator_vertical_line_color="@color/line_color"
+        app:indicator_vertical_line_h="20dp"
+        app:indicator_width="0dp" />
+```	
    ***app 主项目的build.gradle***
    
     
