@@ -53,7 +53,7 @@ allprojects {
 
 ```
 dependencies {
-	compile 'com.github.LuckSiege:EasyIndicator:v1.0.2'  
+	compile 'com.github.LuckSiege:EasyIndicator:v1.0.3'  
 }
 ```
 	  
