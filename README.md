@@ -4,8 +4,8 @@
 
 使用方法：
 
-      ```
-   app:indicator_bottom_height="" 底部指示器高度
+```
+app:indicator_bottom_height="" 底部指示器高度
       app:indicator_bottom_line_color="" 底部线条颜色
       app:indicator_bottom_line_height="" 底部线条高度
       app:indicator_width="" tab宽度
@@ -18,7 +18,7 @@
       app:indicator_vertical_line="" 垂直分割线条宽度     
       app:indicator_vertical_line_color="" 垂直线条颜色   
       app:indicator_vertical_line_h=""  垂直线条高度
-      ```
+```
       
 ```      
 <com.luck.indicator.EasyIndicator
