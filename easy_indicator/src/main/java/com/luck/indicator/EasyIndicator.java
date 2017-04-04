@@ -184,7 +184,7 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
      *
      * @param adapter
      */
-    public void setViewPageViews(FragmentPagerAdapter adapter) {
+    public void setViewPage(FragmentPagerAdapter adapter) {
         viewPager = new ViewPager(getContext());
         viewPager.setId(R.id.vp);
         viewPager.setLayoutParams(new LinearLayoutCompat.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
