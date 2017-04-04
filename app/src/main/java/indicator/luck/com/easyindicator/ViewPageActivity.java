@@ -27,7 +27,7 @@ public class ViewPageActivity extends AppCompatActivity {
                         new FragmentTab3(), new FragmentTab4()}));
 
         // 自带设置
-//        easy_indicator.setViewPageViews(new FragmentAdapter(getSupportFragmentManager(),
+//        easy_indicator.setViewPage(new FragmentAdapter(getSupportFragmentManager(),
 //                new Fragment[]{new FragmentTab1(), new FragmentTab2(),
 //                        new FragmentTab3(), new FragmentTab4()}));
 
