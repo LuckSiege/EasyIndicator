@@ -6,7 +6,8 @@
         <attr name="indicator_bottom_line_height" format="dimension" />
         <attr name="indicator_bottom_height" format="dimension" />
         <attr name="indicator_textSize" format="dimension" />
-        <attr name="indicator_vertical_line" format="dimension" />
+        <attr name="indicator_select_textSize" format="dimension" />
+        <attr name="indicator_vertical_line_w" format="dimension" />
         <attr name="indicator_vertical_line_h" format="dimension" />
         <attr name="indicator_width" format="dimension" />
         <attr name="indicator_selected_color" format="color" />

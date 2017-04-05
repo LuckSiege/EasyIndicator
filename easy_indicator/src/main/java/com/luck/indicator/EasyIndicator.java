@@ -42,7 +42,7 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
     private int indicatorHeight = 45;// tab默认高度
     private int indicator_width = -1;// tab宽度,默认填充全屏
     private int indicator_bottom_line_height = 1;// 指示器底部线条高度
-    private int indicator_vertical_line = 0;// 中间分割线
+    private int indicator_vertical_line_w = 0;// 中间分割线宽度
     private int indicator_vertical_line_h = 0;// 中间分割线高度
     private int indicator_bottom_height = 3;//指示器默认高度
     private int indicator_bottom_line_color;// 指示器底部线条颜色
@@ -50,6 +50,7 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
     private int indicator_vertical_line_color;//// 中间分割线颜色
     private int indicator_selected_color, indicator_normal_color;// 选中颜色和默认颜色
     private float indicator_textSize = 14;// 默认字体大小
+    private float indicator_select_textSize = indicator_textSize; // 选中字体大小
     private boolean indicator_isBottom_line = true;// 是否显示指示器
     private int position;
     private ViewPager viewPager;
@@ -90,14 +91,15 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
         // indicator_isBottom_line
         indicator_isBottom_line = a.getBoolean(R.styleable.MyIndicator_indicator_isBottom_line, indicator_isBottom_line);
         // indicator_vertical_line
-        indicator_vertical_line = (int) getDimensionPixelSize(a, R.styleable.MyIndicator_indicator_vertical_line, indicator_vertical_line);
+        indicator_vertical_line_w = (int) getDimensionPixelSize(a, R.styleable.MyIndicator_indicator_vertical_line_w, indicator_vertical_line_w);
         // indicator_vertical_line_color
         indicator_vertical_line_color = a.getColor(R.styleable.MyIndicator_indicator_vertical_line_color, indicator_vertical_line_color);
         // indicator_vertical_line_h
         indicator_vertical_line_h = (int) getDimensionPixelSize(a, R.styleable.MyIndicator_indicator_vertical_line_h, indicator_vertical_line_h);
         // indicator_width
         indicator_width = (int) getDimensionPixelSize(a, R.styleable.MyIndicator_indicator_width, indicator_width);
-
+        // indicator_select_textSize
+        indicator_select_textSize = getDimensionPixelSize(a, R.styleable.MyIndicator_indicator_select_textSize, 14);
         if (indicator_width == 0) {
             indicator_width = -1;
         }
@@ -109,7 +111,6 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
         tab_content.setBackgroundColor(Color.WHITE);
         params.gravity = Gravity.CENTER;
         tab_content.setLayoutParams(params);
-        tab_content.setGravity(Gravity.CENTER);
     }
 
     /**
@@ -126,16 +127,18 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
             view = new TextView(getContext());
             view.setTag(i);
             view.setText(tabTitles[i]);
-            view.setTextSize(TypedValue.COMPLEX_UNIT_PX, indicator_textSize);
+
             view.setGravity(Gravity.CENTER);
             LinearLayout.LayoutParams lp = new LayoutParams(0, indicatorHeight, 1.0f);
             view.setLayoutParams(lp);
             switch (i) {
                 case 0:
                     view.setTextColor(indicator_selected_color);
+                    view.setTextSize(TypedValue.COMPLEX_UNIT_PX, indicator_select_textSize);
                     break;
                 default:
                     view.setTextColor(indicator_normal_color);
+                    view.setTextSize(TypedValue.COMPLEX_UNIT_PX, indicator_textSize);
                     break;
             }
             view.setOnClickListener(this);
@@ -144,7 +147,7 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
             if (i != tabTitles.length - 1) {
                 View line = new View(getContext());
                 line.setBackgroundColor(indicator_vertical_line_color);
-                LinearLayoutCompat.LayoutParams compat = new LinearLayoutCompat.LayoutParams(indicator_vertical_line, indicator_vertical_line_h);
+                LinearLayoutCompat.LayoutParams compat = new LinearLayoutCompat.LayoutParams(indicator_vertical_line_w, indicator_vertical_line_h);
                 line.setLayoutParams(compat);
                 tab_content.addView(line);
             }
@@ -248,8 +251,10 @@ public class EasyIndicator extends LinearLayout implements View.OnClickListener,
     private void setSelectorColor(TextView tv) {
         for (int i = 0; i < tvs.length; i++) {
             tvs[i].setTextColor(indicator_normal_color);
+            tvs[i].setTextSize(TypedValue.COMPLEX_UNIT_PX, indicator_textSize);
         }
         tv.setTextColor(indicator_selected_color);
+        tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, indicator_select_textSize);
     }
 
     public void setOnTabClickListener(EasyIndicator.onTabClickListener onTabClickListener) {
