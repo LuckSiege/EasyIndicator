@@ -18,6 +18,7 @@
       app:indicator_vertical_line="" 垂直分割线条宽度     
       app:indicator_vertical_line_color="" 垂直线条颜色   
       app:indicator_vertical_line_h=""  垂直线条高度
+      app:indicator_select_textSize="" 选中字体放大效果
 ```
       
 ```      
@@ -29,6 +30,7 @@
         app:indicator_bottom_line_color="@color/line_color"
         app:indicator_bottom_line_height="1dp"
         app:indicator_height="42dp"
+	app:indicator_select_textSize="14sp"
         app:indicator_isBottom_line="true"
         app:indicator_line_color="@color/app_color"
         app:indicator_normal_color="@color/color_70"
