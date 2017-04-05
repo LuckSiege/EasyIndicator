@@ -24,7 +24,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         mContext = this;
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         easy_indicator = (EasyIndicator) findViewById(R.id.easy_indicator);
-        easy_indicator.setTabTitles(new String[]{"进行中", "已完成", "已评价"});
+        easy_indicator.setTabTitles(new String[]{"已完成", "已评价"});
         easy_indicator.setOnTabClickListener(new EasyIndicator.onTabClickListener() {
             @Override
             public void onTabClick(String title, int position) {
