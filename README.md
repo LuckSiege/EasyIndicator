@@ -15,7 +15,7 @@
       app:indicator_normal_color="" tab选中颜色      
       app:indicator_selected_color="" tab未选中颜色    
       app:indicator_textSize="" tab字体大小     
-      app:indicator_vertical_line="" 垂直分割线条宽度     
+      app:indicator_vertical_line_w="" 垂直分割线条宽度     
       app:indicator_vertical_line_color="" 垂直线条颜色   
       app:indicator_vertical_line_h=""  垂直线条高度
       app:indicator_select_textSize="" 选中字体放大效果
@@ -36,7 +36,7 @@
         app:indicator_normal_color="@color/color_70"
         app:indicator_selected_color="@color/app_color"
         app:indicator_textSize="14sp"
-        app:indicator_vertical_line="1dp"
+        app:indicator_vertical_line_w="1dp"
         app:indicator_vertical_line_color="@color/line_color"
         app:indicator_vertical_line_h="20dp"
         app:indicator_width="0dp" />
