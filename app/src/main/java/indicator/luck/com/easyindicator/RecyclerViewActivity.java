@@ -37,6 +37,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 mContext, LinearLayoutManager.HORIZONTAL, dip2px(mContext, 0.5f), ContextCompat.getColor(mContext, R.color.line_color)));
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(new MyAdapter(mContext));
+        easy_indicator.setTabTitles(new String[]{"已完成(10)", "已评价"});
     }
 
     /**

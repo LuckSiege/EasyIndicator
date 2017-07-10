@@ -19,11 +19,12 @@
         app:indicator_isBottom_line="true"
         app:indicator_line_color="@color/app_color"
         app:indicator_normal_color="@color/color_70"
+        app:indicator_select_textSize="14sp"
         app:indicator_selected_color="@color/app_color"
         app:indicator_textSize="14sp"
         app:indicator_vertical_line_color="@color/line_color"
-        app:indicator_vertical_line_h="20dp"
-        app:indicator_vertical_line_w="0dp"
+        app:indicator_vertical_line_h="25dp"
+        app:indicator_vertical_line_w="1dp"
         app:indicator_width="0dp" />
 
     <android.support.v7.widget.RecyclerView
